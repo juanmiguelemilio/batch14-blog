@@ -1,9 +1,9 @@
-<%= form_with url: create_article_path, local: true do |f|%>
+<%= form_with url: article_create_path, local: true, data: { turbo: false } do |f| %>
 
 <p>
-  <%= if @article.errors.any? %>
+  <% if @article.errors.any? %>
   <ul>
-    <% @artcile.errors.full_messages.each do |message| %>
+    <% @article.errors.full_messages.each do |message| %>
     <li><%= message %></li>
     <% end %>
   </ul>
