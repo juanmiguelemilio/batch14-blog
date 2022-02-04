@@ -5,9 +5,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "articles#index"
+  
+  resources :articles do
+    resources :comments
+  end
 
   get '/articles' => 'articles#index'
   get '/articles/new' => 'articles#new'
+  get "/articles", to: "articles#index"
+  get "/articles/:id", to: "articles#show"
 
   post '/articles' => 'articles#create', as: 'article_create'
   

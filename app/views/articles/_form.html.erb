@@ -1,0 +1,32 @@
+<%= form_with model: article do |f| %>
+
+<div class="blog-article-container">
+  <div class="blog-container">
+    <p>
+      <%= f.label :title %> <br>
+      <%= f.text_field :name %>
+      <% article.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </p> <br>
+
+    <p>
+      <%= f.label :body %> <br>
+      <%= f.text_area :body %> <br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </p> <br>
+
+    <p>
+      <%= f.label :published_as %>
+      <%= f.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </p> <br>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
+</div>
+  
+<% end %>

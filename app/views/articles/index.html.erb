@@ -1,21 +1,30 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Body</th>
-    <tr>
-  <thead>
+<%= render "header" %>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.id %></td>
-        <td><%= article.name %></td>
-        <td><%= article.body %></td>
-      <tr>
-    <% end %>
-  </tbody>
-</table>
+<%# Our blog has %>
+<%# <%= Article.public_count %>
+<%# articles and counting! %>
 
-<%= link_to 'New Article', new_article_path %>
+<%# <div class="blog-article-container">
+<h2 class="blog-container">Series 1</h2> <br>
+</div> %>
+
+<div class="blog-containter">
+  <div class="blog-list">
+    <h2 class="blog-container">Series 1</h2> <br>
+    <ul>
+      <% @articles.each do |article| %>
+        <% unless article.archived? %>
+          <li>
+            <%= link_to article.name, article %>
+            </a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+<div class="link-to-new-blog">
+  <%= link_to 'New Blog', new_article_path %>
+</div>

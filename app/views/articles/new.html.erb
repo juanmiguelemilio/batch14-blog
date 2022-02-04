@@ -1,27 +1,11 @@
-<%= form_with url: article_create_path, local: true, data: { turbo: false } do |f| %>
+<%= render "header" %>
 
-<p>
-  <% if @article.errors.any? %>
-  <ul>
-    <% @article.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ul>
-  <% end %>
-</p>
+<div class="blog-article-container">
+<h2 class="blog-container">New Article</h2>
+</div>
 
-<p>
-  <%= f.label :name %><br/>
-  <%= f.text_field :name %>
-</p>
+<div class="link-to-new-blog">
+  <%= link_to 'Back to articles', articles_path %>
+</div>
 
-<p>
-  <%= f.label :body %><br/>
-  <%= f.text_field :body %>
-</p>
-
-<p>
-  <%= f.submit %>
-</p>
-
-<% end %>
+<%= render "form", article: @article %>

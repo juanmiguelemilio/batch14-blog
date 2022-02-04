@@ -1,0 +1,39 @@
+<%= render "header" %>
+
+<div class="main-article-container">
+  <div class="article-container">
+    <div class="inner-article">
+      <div>
+        <h2 class="test"><%= @article.name %></h2>
+      </div>
+      <br>
+      <div>
+        <p><%= @article.body %></p>
+      </div>
+
+      <div class="edit-delete">
+        <p class="edit"><%= link_to "Edit", edit_article_path(@article) %></p>
+        <p class="delete"><%= link_to "Delete", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+      </div>
+    </div>
+
+    <hr> <br>
+
+    <div class="comment-div">
+    <h4>Comments</h4>
+    <%= render @article.comments %>
+
+    <br>
+    <hr>
+    <br>
+    
+    <h4>Add a comment:</h4> <br>
+      <%= render 'comments/form' %>
+    </div>
+    </div>
+</div>
+
+<div class="link-to-new-blog">
+  <%= link_to 'Back to articles', articles_path %>
+</div>
+

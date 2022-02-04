@@ -1,3 +1,11 @@
-<h1>Edit Article</h1>
+<%= render "header" %>
+
+<div class="blog-article-container">
+<h2 class="blog-container">Edit Article</h2>
+</div>
+
+<div class="link-to-new-blog">
+  <%= link_to 'Back to articles', articles_path %>
+</div>
 
 <%= render "form", article: @article %>
