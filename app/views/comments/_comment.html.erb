@@ -9,9 +9,9 @@
   <p class="comment-body">
     <%= comment.body %>
     
-  </p>
+  </p> <br>
 
-  <p class="comment-body"> <br>
+  <p class="comment-body comment-delete"> <br>
   <%= link_to "delete", [comment.article, comment], data: {
                 turbo_method: :delete,
                 turbo_confirm: "Are you sure?"

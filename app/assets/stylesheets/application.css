@@ -51,6 +51,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -82,6 +83,10 @@ li:hover {
   width: 90vw;
   padding: 8px 10px;
   padding-top: 30px;
+}
+
+.article-hr {
+  width: 450px;
 }
 
 /* END OF INDEX */
@@ -144,13 +149,39 @@ li:hover {
   font-size: 14px;
 }
 
+.comment-delete {
+  font-size: 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+}
+
+.comment-delete:hover {
+  background-color: red;
+}
+
+.comment-delete:hover a {
+  color: white;
+}
+
+.comment-delete a {
+  color: black;
+}
+ 
 .comments-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   width: 45vw;
   margin: 20px;
   padding: 20px;
+}
+
+.comments-container:hover {
+  background-color: white;
 }
 
 textarea {
@@ -179,6 +210,10 @@ textarea {
 
 .inner-blog {
   width: 100vw;
+}
+
+.blog-container textarea {
+  height: 500px;
 }
 
 
