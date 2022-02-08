@@ -1,0 +1,15 @@
+current directory: /Users/mklhwngbngl/Downloads/batch14-blog/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.3/ext/bootsnap
+/Users/mklhwngbngl/.asdf/installs/ruby/3.0.2/bin/ruby -I /Users/mklhwngbngl/.asdf/installs/ruby/3.0.2/lib/ruby/3.0.0 -r ./siteconf20220208-53016-7qtu6l.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mklhwngbngl/Downloads/batch14-blog/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.3/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/mklhwngbngl/Downloads/batch14-blog/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.3/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/mklhwngbngl/Downloads/batch14-blog/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.3/ext/bootsnap
+make DESTDIR\= install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220208-53016-2pg2mi/bootsnap
